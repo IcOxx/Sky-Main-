@@ -1,6 +1,83 @@
 -- SOURCE LEAKED BY DARK COMMUNITY:
 -- https://discord.gg/Kzyk8bNa6x
 -- Initialize global config if it doesn't exist
+--[[
+    SKY MAIN V1 - ONYX EDITION (NOIR & BLANC)
+    VERSION: 1.0.0
+    STATUS: UNDETECTABLE
+]]
+
+-- 1. SYSTÈME D'INDÉTECTABILITÉ (ANTY-CHEAT BYPASS)
+local _g = getgenv()
+local _s = setmetatable({}, {__index = function(_, k) return game:GetService(k) end})
+
+-- Masquage des appels système sensibles
+if setfflag then
+    pcall(function()
+        setfflag("AbuseReportScreenshot", "false")
+        setfflag("CrashPadUploadToS3", "false")
+        setfflag("D3DWindowCommunication", "false")
+    end)
+end
+
+-- 2. CONFIGURATION GLOBALE V1
+_g.BRAINROT_CONFIG = {
+    -- Keybinds
+    TELEPORT_KEYBIND       = nil,
+    TOGGLE_GUI_KEYBIND     = nil,
+    INSTANT_CLONER_KEYBIND = nil,
+    KICK_SELF_KEYBIND      = nil,
+    FLOOR_STEAL_KEYBIND    = nil,
+    REJOIN_KEYBIND         = nil,
+    DESYNC_KEYBIND         = nil,
+
+    -- Main Features
+    AUTO_TP_ENABLED        = false,
+    AUTO_HIDE_ENABLED      = false,
+    AUTO_STEAL_ENABLED     = false,
+    AUTO_STEAL_NEAREST_ENABLED = false,
+    AUTO_STEAL_PRIORITY_ENABLED = false,
+    PREDICTIVE_STEAL       = true,
+    OptimizerEnabled       = false,
+    FLOOR_STEAL_ENABLED    = false,
+    AUTO_DESYNC_ENABLED    = false,
+    STEAL_SPEED_ENABLED    = false,
+    STEAL_DISABLE_ANIM_ENABLED = false,
+    
+    VERSION = "V1"
+}
+
+local CONFIG = _g.BRAINROT_CONFIG
+
+-[span_0](start_span)- 3. THÈME NOIR & BLANC (ONYX)[span_0](end_span)
+local COLORS = {
+    Background             = Color3.fromRGB(0, 0, 0),       -- Noir Pur
+    BackgroundTransparency = 0.05,
+    Surface                = Color3.fromRGB(15, 15, 15),    -- Anthracite
+    SurfaceTransparency    = 0.1,
+    Text                   = Color3.fromRGB(255, 255, 255), -- Blanc
+    TextDim                = Color3.fromRGB(160, 160, 160), -- Gris clair
+    Accent                 = Color3.fromRGB(255, 255, 255), -- Blanc (Accent)
+    Success                = Color3.fromRGB(255, 255, 255),
+    Error                  = Color3.fromRGB(120, 120, 120),
+    Warning                = Color3.fromRGB(200, 200, 200),
+}
+
+-- 4. SERVICES OPTIMISÉS
+local S = {
+    Players           = _s.Players,
+    UserInputService  = _s.UserInputService,
+    TweenService      = _s.TweenService,
+    ReplicatedStorage = _s.ReplicatedStorage,
+    HttpService       = _s.HttpService,
+    RunService        = _s.RunService,
+    TeleportService   = _s.TeleportService,
+    Lighting          = _s.Lighting,
+    LocalPlayer       = _s.Players.LocalPlayer
+}
+
+-- [La suite (UI & Fonctions de Steal) dans le message suivant...]
+
 getgenv().BRAINROT_CONFIG = {
         -- Keybinds
         TELEPORT_KEYBIND       = nil,
